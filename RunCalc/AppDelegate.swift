@@ -13,6 +13,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
+    // create variables to store paces
+    var distanceDisplay = String()
+    var timeDisplay = String()
+    var marText = String()
+    var halfmarText = String()
+    var tenKText = String()
+    var fiveKText = String()
+    var threeKText = String()
+    var mileText = String()
+    var sixteenhunText = String()
+    var twelvehunText = String()
+    var oneKText = String()
+    var eighthunText = String()
+    var fourhunText = String()
+    var twohunText = String()
+    var onehunText = String()
+    
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
@@ -40,7 +57,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
 
 }
 

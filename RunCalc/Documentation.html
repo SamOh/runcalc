@@ -1,0 +1,20 @@
+//
+//  Documentation.html
+//  RunCalc
+//
+//  Created by Samuel Oh on 12/6/15.
+//  Copyright (c) 2015 Samuel Oh. All rights reserved.
+//
+
+STAFF DOCUMENTATION!
+
+Hello! This app is meant for runners to use to calculate different paces for different races/distances based on the input that he or she puts into the calculator.
+
+To implement this app, I used two different views, put together in a UITabbarviewcontroller. The first tab, all of the code for which is in ViewController and which is a subclass of ViewController (not UIViewController), is the actual calculator part of the app. There are two different UIPickerViews on display with the first one with three columns and varying sizes of rows that gives the user the ability to scroll and create a time in the format 0:00:00 for hours/min/secs. The second UIPickerView has a distance and unit of measure for the user to calculate.
+
+Once the user puts their desired input into the pickerview, he or she presses the calculate button, which ultimately runs many calculations (the code for which is towards the bottom of ViewController), then the different calculations made are SAVED inside a global variable stored inside of the AppDelegate. Then, once, you switch tabs to the paces view tab (subclass PacesViewController and also in the file PacesViewController), the ViewDidAppear method will run and the variables saved inside the AppDelegate will be transfered to the multiple different UILabels inside the display of the PacesViewController display. Then the subsequent values for the labels will be displayed inside of the second tab with the running guy icon.
+
+The user can then go back and make different calculations which will show up in the second tab each time the user changed the UIPickerViews and presses the calculate button.
+
+To compile, configure, and use the project, simply download Xcode and press the play button on the top left corner of the screen.
+

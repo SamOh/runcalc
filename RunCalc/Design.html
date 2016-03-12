@@ -1,0 +1,15 @@
+//
+//  Design.html
+//  RunCalc
+//
+//  Created by Samuel Oh on 12/6/15.
+//  Copyright (c) 2015 Samuel Oh. All rights reserved.
+//
+
+For the initial calculator View Controller, I decided to use two different UI PickerViews rather than other types of views that could potentially get user input for a variety of reasons.
+    1. The UI picker views allowed me to make it so that the user cannot enter anything out of the bounds of reason that could potentially make the app crash– the user can only choose what is in the picker view
+    1. The UI picker view had a nice asthetic appeal because of its inherent simplicity– anyone who sees it can easily know how to use it without having to read any instructions.
+
+I chose the icons on the bottom on the tab bars because they were really simple and exemplified what each tab's purpose is. The simple calculator image shows that that tib will be used for calculations, while the running guy shows that the other tab will likely be where the paces of running would be shown.
+
+Similarly, in the paces display, the numbers are formatted in the way 0:00:00  as hr/min/sec or 00:00 as min/sec or 00:00 as sec/Msec. This was intentional, so that the display was most simple for the user to see at a quick glance. In the code, I used checks to make sure to add an extra 0 as a buffer just in case, so that the formatting would always fit into the format. Only when the user inputs bizarre combinations does the formatting in pace view get a little different, but for the main use of the app, the formatting is really nice and organized in the paces view.
