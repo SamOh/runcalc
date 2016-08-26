@@ -38,7 +38,7 @@ class PacesViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         
-        var appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+        let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
         
         DistDisplay.text = appDelegate.distanceDisplay
         TimeDisplay.text = appDelegate.timeDisplay
