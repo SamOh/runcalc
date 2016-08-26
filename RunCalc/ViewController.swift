@@ -206,26 +206,54 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
 
-        // Abstraction: function to calculate time
-        let fun calc_time (time: int) (distance: int) =
-            let newTime = Double(time) * 26.21876 / Double(distance) in
-            let newHour = Int(newTime / 3600) in
-            let newMin = Int((newTime - Double(newHour * 3600)) / 60) in
-            var newSec = Int(newTime - Double(newHour * 3600) - Double(newMin * 60)) in
-        
-        if newMin < 10 && newSec > 10
-        
-        
-        //PacesViewController.Distance = distanceDisplay
-        
-        // Store the data in a new section in next tab
-        //pacesData.extend(distance: distanceDisplay, time: timeDisplay)
-        
-        // Create variables that switch from strings to ints
-        var userHoursInt = userHours.toInt()!
-        var userMinutesInt = userMinutes.toInt()!
-        var userSecondsInt = userSeconds.toInt()!
-        var userDistInt = userDist.toInt()!
+//        // Abstraction: function to calculate time
+//        let newTime = Double(time) * 26.21876 / Double(distance)
+//        let
+//        
+//        let fun calc_time (time: int) (distance: int) =
+//        let newTime = Double(time) * 26.21876 / Double(distance) in
+//                let newHour = Int(newTime / 3600) in
+//                let newMin = Int((newTime - Double(newHour * 3600)) / 60) in
+//                var newSec = Int(newTime - Double(newHour * 3600) - Double(newMin * 60)) in
+//        
+//        // if the min is less than 10, add 0 for proper spacing
+//        if newMin < 10 && newSec > 10
+//        {
+//            newText = "\(String(newHour)):0\(String(newMin)):\(String(newSec))"
+//        }
+//            
+//            // if the sec is less than 10, add 0 for proper spacing
+//        else if marSec < 10 && marMin > 10
+//        {
+//            newText = "\(String(newHour)):\(String(newMin)):0\(String(newSec))"
+//        }
+//            
+//            // if min <10 and sec <10 add 0 for proper spacing
+//        else if newMin < 10 && newSec < 10
+//        {
+//            newText = "\(String(newHour)):0\(String(newMin)):0\(String(newSec))"
+//        }
+//            
+//            // if min and sec are > 10, no additional 0
+//        else if newMin > 10 && newSec > 10
+//        {
+//            newText = "\(String(newHour)):\(String(newMin)):\(String(newSec))"
+//        }
+//        
+//        
+//        //REMEMBER TO PUT THIS CODE IN EACH PLACE
+//        appDelegate.marText = marText
+//        
+//        //PacesViewController.Distance = distanceDisplay
+//        
+//        // Store the data in a new section in next tab
+//        //pacesData.extend(distance: distanceDisplay, time: timeDisplay)
+//        
+//        // Create variables that switch from strings to ints
+//        var userHoursInt = userHours.Int()!
+//        var userMinutesInt = userMinutes.Int()!
+//        var userSecondsInt = userSeconds.Int()!
+//        var userDistInt = userDist.Int()!
 
         // initialize variables to display on display page
         

@@ -171,6 +171,7 @@
 		78840ED01C0384D4002CC1C6 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Samuel Oh";
 				TargetAttributes = {
@@ -183,7 +184,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 78840ED31C0384D4002CC1C6 /* Build configuration list for PBXProject "RunCalc" */;
+			buildConfigurationList = 78840ED31C0384D4002CC1C6 /* Build configuration list for PBXProject "RunCalc 2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -413,7 +414,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		78840ED31C0384D4002CC1C6 /* Build configuration list for PBXProject "RunCalc" */ = {
+		78840ED31C0384D4002CC1C6 /* Build configuration list for PBXProject "RunCalc 2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				78840EF51C0384D4002CC1C6 /* Debug */,
