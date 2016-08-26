@@ -164,7 +164,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
     @IBAction func buttonPress(sender: AnyObject)
     {
         
-        // take into account specific cases when user doesn't move pickerview
+        // take into account specific case (default) when user doesn't move pickerview
         if userDist == ""
         {
             userDist = "1"
@@ -206,49 +206,43 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         }
         
 
-//        // Abstraction: function to calculate time
-//        let newTime = Double(time) * 26.21876 / Double(distance)
-//        let
-//        
-//        let fun calc_time (time: int) (distance: int) =
-//        let newTime = Double(time) * 26.21876 / Double(distance) in
-//                let newHour = Int(newTime / 3600) in
-//                let newMin = Int((newTime - Double(newHour * 3600)) / 60) in
-//                var newSec = Int(newTime - Double(newHour * 3600) - Double(newMin * 60)) in
-//        
-//        // if the min is less than 10, add 0 for proper spacing
-//        if newMin < 10 && newSec > 10
-//        {
-//            newText = "\(String(newHour)):0\(String(newMin)):\(String(newSec))"
-//        }
-//            
-//            // if the sec is less than 10, add 0 for proper spacing
-//        else if marSec < 10 && marMin > 10
-//        {
-//            newText = "\(String(newHour)):\(String(newMin)):0\(String(newSec))"
-//        }
-//            
-//            // if min <10 and sec <10 add 0 for proper spacing
-//        else if newMin < 10 && newSec < 10
-//        {
-//            newText = "\(String(newHour)):0\(String(newMin)):0\(String(newSec))"
-//        }
-//            
-//            // if min and sec are > 10, no additional 0
-//        else if newMin > 10 && newSec > 10
-//        {
-//            newText = "\(String(newHour)):\(String(newMin)):\(String(newSec))"
-//        }
-//        
-//        
-//        //REMEMBER TO PUT THIS CODE IN EACH PLACE
-//        appDelegate.marText = marText
-//        
-//        //PacesViewController.Distance = distanceDisplay
-//        
-//        // Store the data in a new section in next tab
-//        //pacesData.extend(distance: distanceDisplay, time: timeDisplay)
-//        
+        // Abstraction: function to standardize display of numbers
+        func standardizeDisplay(newSec: Int, newMin: Int, newHour: Int) -> String {
+            // if the min is less than 10, add 0 for proper spacing
+            if newMin < 10 && newSec > 10
+            {
+                let newText = "\(String(newHour)):0\(String(newMin)):\(String(newSec))"
+                return newText
+            }
+                
+            // if the sec is less than 10, add 0 for proper spacing
+            else if newSec < 10 && newMin > 10
+            {
+                let newText = "\(String(newHour)):\(String(newMin)):0\(String(newSec))"
+                return newText
+            }
+                
+            // if min <10 and sec <10 add 0 for proper spacing
+            else if newMin < 10 && newSec < 10
+            {
+                let newText = "\(String(newHour)):0\(String(newMin)):0\(String(newSec))"
+                return newText
+            }
+                
+            // if min and sec are > 10, no additional 0
+            else if newMin > 10 && newSec > 10
+            {
+                let newText = "\(String(newHour)):\(String(newMin)):\(String(newSec))"
+                return newText
+            }
+            // Should never return 00
+            return "00"
+        }
+        
+        
+        // Store the data in a new section in next tab (TODO)
+        //pacesData.extend(distance: distanceDisplay, time: timeDisplay)
+        
         // Create variables that switch from strings to ints
         let userHoursInt = Int(userHours)!
         let userMinutesInt = Int(userMinutes)!
@@ -269,35 +263,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let marMin = Int((marTime - Double(marHour * 3600)) / 60)
             let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if marMin < 10 && marSec > 10
-            {
-                  marText = "\(String(marHour)):0\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-                
-            }
-                
-            // if the sec is less than 10, add 0 for proper spacing
-            else if marSec < 10 && marMin > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-            }
-                
-            // if min <10 and sec <10 add 0 for proper spacing
-            else if marMin < 10 && marSec < 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-            }
-                
-            // if min and sec are > 10, no additional 0
-            else if marMin > 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-            }
-            
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.marText = standardizeDisplay(marSec, newMin: marMin, newHour: marHour)
             
             // calcs for halfmarathon pace
             let halfmarTime = Double(totalTime) * 13.10938 / Double(userDistInt)
@@ -305,36 +272,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
             let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if halfmarMin < 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if halfmarSec < 10 && halfmarMin > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if halfmarMin < 10 && halfmarSec < 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-                
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if halfmarMin > 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-                
-            }
-            
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.halfmarText = standardizeDisplay(halfmarSec, newMin: halfmarMin, newHour: halfmarHour)
             
             // calcs for tenK pace
             let tenKTime = Double(totalTime) * 6.21371 / Double(userDistInt)
@@ -562,38 +501,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let marMin = Int((marTime - Double(marHour * 3600)) / 60)
             let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if marMin < 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if marSec < 10 && marMin > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if marMin < 10 && marSec < 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if marMin > 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-            
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.marText = standardizeDisplay(marSec, newMin: marMin, newHour: marHour)
             
             // calcs for halfmarathon pace
             let halfmarTime = Double(totalTime) * 21.0975 / Double(userDistInt)
@@ -601,38 +510,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
             let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if halfmarMin < 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if halfmarSec < 10 && halfmarMin > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if halfmarMin < 10 && halfmarSec < 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if halfmarMin > 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-            
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.halfmarText = standardizeDisplay(halfmarSec, newMin: halfmarMin, newHour: halfmarHour)
             
             // calcs for tenK pace
             let tenKTime = Double(totalTime) * 10 / Double(userDistInt)
@@ -860,37 +739,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let marMin = Int((marTime - Double(marHour * 3600)) / 60)
             let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if marMin < 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if marSec < 10 && marMin > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if marMin < 10 && marSec < 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if marMin > 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.marText = standardizeDisplay(marSec, newMin: marMin, newHour: marHour)
             
             // calcs for halfmarathon pace
             let halfmarTime = Double(totalTime) * 21097.5 / Double(userDistInt)
@@ -898,37 +748,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
             let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if halfmarMin < 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if halfmarSec < 10 && halfmarMin > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if halfmarMin < 10 && halfmarSec < 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if halfmarMin > 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.halfmarText = standardizeDisplay(halfmarSec, newMin: halfmarMin, newHour: halfmarHour)
             
             
             // calcs for tenK pace
@@ -1158,37 +979,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let marMin = Int((marTime - Double(marHour * 3600)) / 60)
             let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if marMin < 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if marSec < 10 && marMin > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if marMin < 10 && marSec < 10
-            {
-                marText = "\(String(marHour)):0\(String(marMin)):0\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if marMin > 10 && marSec > 10
-            {
-                marText = "\(String(marHour)):\(String(marMin)):\(String(marSec))"
-                appDelegate.marText = marText
-    
-            }
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.marText = standardizeDisplay(marSec, newMin: marMin, newHour: marHour)
             
             
             // calcs for halfmarathon pace
@@ -1197,37 +989,8 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
             let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
-            // if the min is less than 10, add 0 for proper spacing
-            if halfmarMin < 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if the sec is less than 10, add 0 for proper spacing
-            else if halfmarSec < 10 && halfmarMin > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if min <10 and sec <10 add 0 for proper spacing
-            else if halfmarMin < 10 && halfmarSec < 10
-            {
-                halfmarText = "\(String(halfmarHour)):0\(String(halfmarMin)):0\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
-                
-                // if min and sec are > 10, no additional 0
-            else if halfmarMin > 10 && halfmarSec > 10
-            {
-                halfmarText = "\(String(halfmarHour)):\(String(halfmarMin)):\(String(halfmarSec))"
-                appDelegate.halfmarText = halfmarText
-    
-            }
+            // send info to the appDelegate so that they can be displayed in pacesviewcontroller
+            appDelegate.halfmarText = standardizeDisplay(halfmarSec, newMin: halfmarMin, newHour: halfmarHour)
             
             
             // calcs for tenK pace
