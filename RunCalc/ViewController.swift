@@ -249,11 +249,11 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 //        // Store the data in a new section in next tab
 //        //pacesData.extend(distance: distanceDisplay, time: timeDisplay)
 //        
-//        // Create variables that switch from strings to ints
-//        var userHoursInt = userHours.Int()!
-//        var userMinutesInt = userMinutes.Int()!
-//        var userSecondsInt = userSeconds.Int()!
-//        var userDistInt = userDist.Int()!
+        // Create variables that switch from strings to ints
+        let userHoursInt = Int(userHours)!
+        let userMinutesInt = Int(userMinutes)!
+        let userSecondsInt = Int(userSeconds)!
+        let userDistInt = Int(userDist)!
 
         // initialize variables to display on display page
         
@@ -264,10 +264,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if userUnitOfMeasure == "Mile"
         {
             // calcs for marathon pace
-            var marTime = Double(totalTime) * 26.21876 / Double(userDistInt)
-            var marHour = Int(marTime / 3600)
-            var marMin = Int((marTime - Double(marHour * 3600)) / 60)
-            var marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
+            let marTime = Double(totalTime) * 26.21876 / Double(userDistInt)
+            let marHour = Int(marTime / 3600)
+            let marMin = Int((marTime - Double(marHour * 3600)) / 60)
+            let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if marMin < 10 && marSec > 10
@@ -300,10 +300,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for halfmarathon pace
-            var halfmarTime = Double(totalTime) * 13.10938 / Double(userDistInt)
-            var halfmarHour = Int(halfmarTime / 3600)
-            var halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
-            var halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
+            let halfmarTime = Double(totalTime) * 13.10938 / Double(userDistInt)
+            let halfmarHour = Int(halfmarTime / 3600)
+            let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
+            let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if halfmarMin < 10 && halfmarSec > 10
@@ -337,9 +337,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for tenK pace
-            var tenKTime = Double(totalTime) * 6.21371 / Double(userDistInt)
-            var tenKMin = Int(tenKTime / 60)
-            var tenKSec = Int(tenKTime - Double(tenKMin * 60))
+            let tenKTime = Double(totalTime) * 6.21371 / Double(userDistInt)
+            let tenKMin = Int(tenKTime / 60)
+            let tenKSec = Int(tenKTime - Double(tenKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if tenKSec < 10
@@ -357,9 +357,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for fiveK pace
-            var fiveKTime = Double(totalTime) * 3.10686 / Double(userDistInt)
-            var fiveKMin = Int(fiveKTime / 60)
-            var fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
+            let fiveKTime = Double(totalTime) * 3.10686 / Double(userDistInt)
+            let fiveKMin = Int(fiveKTime / 60)
+            let fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if fiveKSec < 10
@@ -377,9 +377,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
             
             // calcs for threeK pace
-            var threeKTime = Double(totalTime) * 1.86411 / Double(userDistInt)
-            var threeKMin = Int(threeKTime / 60)
-            var threeKSec = Int(threeKTime - Double(threeKMin * 60))
+            let threeKTime = Double(totalTime) * 1.86411 / Double(userDistInt)
+            let threeKMin = Int(threeKTime / 60)
+            let threeKSec = Int(threeKTime - Double(threeKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if threeKSec < 10
@@ -397,9 +397,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for mile pace
-            var mileTime = Double(totalTime) / Double(userDistInt)
-            var mileMin = Int(mileTime / 60)
-            var mileSec = Int(Double(mileTime) - Double(mileMin * 60))
+            let mileTime = Double(totalTime) / Double(userDistInt)
+            let mileMin = Int(mileTime / 60)
+            let mileSec = Int(Double(mileTime) - Double(mileMin * 60))
             
             // if the sec is < 10, add proper spacing
             if mileSec < 10
@@ -417,9 +417,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         
             
             // calcs for 1600m pace
-            var sixteenhunTime = Double(totalTime) * 0.9941939 / Double(userDistInt)
-            var sixteenhunMin = Int(sixteenhunTime / 60)
-            var sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
+            let sixteenhunTime = Double(totalTime) * 0.9941939 / Double(userDistInt)
+            let sixteenhunMin = Int(sixteenhunTime / 60)
+            let sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
             
             // if the sec is < 10, add proper spacing
             if sixteenhunSec < 10
@@ -437,9 +437,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1200m pace
-            var twelvehunTime = Double(totalTime) * 0.7456454 / Double(userDistInt)
-            var twelvehunMin = Int(twelvehunTime / 60)
-            var twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
+            let twelvehunTime = Double(totalTime) * 0.7456454 / Double(userDistInt)
+            let twelvehunMin = Int(twelvehunTime / 60)
+            let twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
             
             // if the sec is <10, add proper spacing
             if twelvehunSec < 10
@@ -457,9 +457,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1k pace
-            var oneKTime = Double(totalTime) * 0.621371 / Double(userDistInt)
-            var oneKMin = Int(oneKTime / 60)
-            var oneKSec = Int(oneKTime - Double(oneKMin * 60))
+            let oneKTime = Double(totalTime) * 0.621371 / Double(userDistInt)
+            let oneKMin = Int(oneKTime / 60)
+            let oneKSec = Int(oneKTime - Double(oneKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if oneKSec < 10
@@ -475,9 +475,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
 
             
             // calcs for 800m pace
-            var eighthunTime = Double(totalTime) * 0.497097 / Double(userDistInt)
-            var eighthunMin = Int(eighthunTime / 60)
-            var eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
+            let eighthunTime = Double(totalTime) * 0.497097 / Double(userDistInt)
+            let eighthunMin = Int(eighthunTime / 60)
+            let eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
             
             // if the sec is <10, add proper spacing
             if eighthunSec < 10
@@ -495,9 +495,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 400m pace
-            var fourhunTime = Double(totalTime) * 0.248548 / Double(userDistInt)
-            var fourhunSec = Int(fourhunTime)
-            var fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
+            let fourhunTime = Double(totalTime) * 0.248548 / Double(userDistInt)
+            let fourhunSec = Int(fourhunTime)
+            let fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if fourhunMSec < 10
@@ -515,9 +515,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 200m pace
-            var twohunTime = Double(totalTime) * 0.124274 / Double(userDistInt)
-            var twohunSec = Int(twohunTime)
-            var twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
+            let twohunTime = Double(totalTime) * 0.124274 / Double(userDistInt)
+            let twohunSec = Int(twohunTime)
+            let twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if twohunMSec < 10
@@ -535,9 +535,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 100m pace
-            var onehunTime = Double(totalTime) * 0.0621371 / Double(userDistInt)
-            var onehunSec = Int(onehunTime)
-            var onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
+            let onehunTime = Double(totalTime) * 0.0621371 / Double(userDistInt)
+            let onehunSec = Int(onehunTime)
+            let onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if onehunMSec < 10
@@ -557,10 +557,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else if userUnitOfMeasure == "Kilometer"
         {
             // calcs for marathon pace
-            var marTime = Double(totalTime) * 42.195 / Double(userDistInt)
-            var marHour = Int(marTime / 3600)
-            var marMin = Int((marTime - Double(marHour * 3600)) / 60)
-            var marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
+            let marTime = Double(totalTime) * 42.195 / Double(userDistInt)
+            let marHour = Int(marTime / 3600)
+            let marMin = Int((marTime - Double(marHour * 3600)) / 60)
+            let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if marMin < 10 && marSec > 10
@@ -596,10 +596,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for halfmarathon pace
-            var halfmarTime = Double(totalTime) * 21.0975 / Double(userDistInt)
-            var halfmarHour = Int(halfmarTime / 3600)
-            var halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
-            var halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
+            let halfmarTime = Double(totalTime) * 21.0975 / Double(userDistInt)
+            let halfmarHour = Int(halfmarTime / 3600)
+            let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
+            let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if halfmarMin < 10 && halfmarSec > 10
@@ -635,9 +635,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for tenK pace
-            var tenKTime = Double(totalTime) * 10 / Double(userDistInt)
-            var tenKMin = Int(tenKTime / 60)
-            var tenKSec = Int(tenKTime - Double(tenKMin * 60))
+            let tenKTime = Double(totalTime) * 10 / Double(userDistInt)
+            let tenKMin = Int(tenKTime / 60)
+            let tenKSec = Int(tenKTime - Double(tenKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if tenKSec < 10
@@ -655,9 +655,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for fiveK pace
-            var fiveKTime = Double(totalTime) * 5 / Double(userDistInt)
-            var fiveKMin = Int(fiveKTime / 60)
-            var fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
+            let fiveKTime = Double(totalTime) * 5 / Double(userDistInt)
+            let fiveKMin = Int(fiveKTime / 60)
+            let fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if fiveKSec < 10
@@ -675,9 +675,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for threeK pace
-            var threeKTime = Double(totalTime) * 3 / Double(userDistInt)
-            var threeKMin = Int(threeKTime / 60)
-            var threeKSec = Int(threeKTime - Double(threeKMin * 60))
+            let threeKTime = Double(totalTime) * 3 / Double(userDistInt)
+            let threeKMin = Int(threeKTime / 60)
+            let threeKSec = Int(threeKTime - Double(threeKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if threeKSec < 10
@@ -695,9 +695,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for mile pace
-            var mileTime = Double(totalTime) * 1.60934 / Double(userDistInt)
-            var mileMin = Int(mileTime / 60)
-            var mileSec = Int(mileTime - Double(mileMin * 60))
+            let mileTime = Double(totalTime) * 1.60934 / Double(userDistInt)
+            let mileMin = Int(mileTime / 60)
+            let mileSec = Int(mileTime - Double(mileMin * 60))
             
             // if the sec is < 10, add proper spacing
             if mileSec < 10
@@ -715,9 +715,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1600m pace
-            var sixteenhunTime = Double(totalTime) * 1.6 / Double(userDistInt)
-            var sixteenhunMin = Int(sixteenhunTime / 60)
-            var sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
+            let sixteenhunTime = Double(totalTime) * 1.6 / Double(userDistInt)
+            let sixteenhunMin = Int(sixteenhunTime / 60)
+            let sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
             
             // if the sec is < 10, add proper spacing
             if sixteenhunSec < 10
@@ -735,9 +735,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1200m pace
-            var twelvehunTime = Double(totalTime) * 1.2 / Double(userDistInt)
-            var twelvehunMin = Int(twelvehunTime / 60)
-            var twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
+            let twelvehunTime = Double(totalTime) * 1.2 / Double(userDistInt)
+            let twelvehunMin = Int(twelvehunTime / 60)
+            let twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
             
             if twelvehunSec < 10
             {
@@ -754,9 +754,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1k pace
-            var oneKTime = Double(totalTime) / Double(userDistInt)
-            var oneKMin = Int(oneKTime / 60)
-            var oneKSec = Int(oneKTime - Double(oneKMin * 60))
+            let oneKTime = Double(totalTime) / Double(userDistInt)
+            let oneKMin = Int(oneKTime / 60)
+            let oneKSec = Int(oneKTime - Double(oneKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if oneKSec < 10
@@ -774,9 +774,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 800m pace
-            var eighthunTime = Double(totalTime) * 0.8 / Double(userDistInt)
-            var eighthunMin = Int(eighthunTime / 60)
-            var eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
+            let eighthunTime = Double(totalTime) * 0.8 / Double(userDistInt)
+            let eighthunMin = Int(eighthunTime / 60)
+            let eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
             
             // if the sec is <10, add proper spacing
             if eighthunSec < 10
@@ -794,9 +794,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 400m pace
-            var fourhunTime = Double(totalTime) * 0.4 / Double(userDistInt)
-            var fourhunSec = Int(fourhunTime)
-            var fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
+            let fourhunTime = Double(totalTime) * 0.4 / Double(userDistInt)
+            let fourhunSec = Int(fourhunTime)
+            let fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if fourhunMSec < 10
@@ -814,9 +814,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 200m pace
-            var twohunTime = Double(totalTime) * 0.2 / Double(userDistInt)
-            var twohunSec = Int(twohunTime)
-            var twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
+            let twohunTime = Double(totalTime) * 0.2 / Double(userDistInt)
+            let twohunSec = Int(twohunTime)
+            let twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if twohunMSec < 10
@@ -834,9 +834,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 100m pace
-            var onehunTime = Double(totalTime) * 0.1 / Double(userDistInt)
-            var onehunSec = Int(onehunTime)
-            var onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
+            let onehunTime = Double(totalTime) * 0.1 / Double(userDistInt)
+            let onehunSec = Int(onehunTime)
+            let onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if onehunMSec < 10
@@ -855,10 +855,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else if userUnitOfMeasure == "Meters"
         {
             // calcs for marathon pace
-            var marTime = Double(totalTime) * 42195 / Double(userDistInt)
-            var marHour = Int(marTime / 3600)
-            var marMin = Int((marTime - Double(marHour * 3600)) / 60)
-            var marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
+            let marTime = Double(totalTime) * 42195 / Double(userDistInt)
+            let marHour = Int(marTime / 3600)
+            let marMin = Int((marTime - Double(marHour * 3600)) / 60)
+            let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if marMin < 10 && marSec > 10
@@ -893,10 +893,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             }
             
             // calcs for halfmarathon pace
-            var halfmarTime = Double(totalTime) * 21097.5 / Double(userDistInt)
-            var halfmarHour = Int(halfmarTime / 3600)
-            var halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
-            var halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
+            let halfmarTime = Double(totalTime) * 21097.5 / Double(userDistInt)
+            let halfmarHour = Int(halfmarTime / 3600)
+            let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
+            let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if halfmarMin < 10 && halfmarSec > 10
@@ -932,9 +932,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for tenK pace
-            var tenKTime = Double(totalTime) * 10000 / Double(userDistInt)
-            var tenKMin = Int(tenKTime / 60)
-            var tenKSec = Int(tenKTime - Double(tenKMin * 60))
+            let tenKTime = Double(totalTime) * 10000 / Double(userDistInt)
+            let tenKMin = Int(tenKTime / 60)
+            let tenKSec = Int(tenKTime - Double(tenKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if tenKSec < 10
@@ -952,9 +952,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for fiveK pace
-            var fiveKTime = Double(totalTime) * 5000 / Double(userDistInt)
-            var fiveKMin = Int(fiveKTime / 60)
-            var fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
+            let fiveKTime = Double(totalTime) * 5000 / Double(userDistInt)
+            let fiveKMin = Int(fiveKTime / 60)
+            let fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if fiveKSec < 10
@@ -972,9 +972,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for threeK pace
-            var threeKTime = Double(totalTime) * 3000 / Double(userDistInt)
-            var threeKMin = Int(threeKTime / 60)
-            var threeKSec = Int(threeKTime - Double(threeKMin * 60))
+            let threeKTime = Double(totalTime) * 3000 / Double(userDistInt)
+            let threeKMin = Int(threeKTime / 60)
+            let threeKSec = Int(threeKTime - Double(threeKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if threeKSec < 10
@@ -992,9 +992,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for mile pace
-            var mileTime = Double(totalTime) * 1609.34 / Double(userDistInt)
-            var mileMin = Int(mileTime / 60)
-            var mileSec = Int(mileTime - Double(mileMin * 60))
+            let mileTime = Double(totalTime) * 1609.34 / Double(userDistInt)
+            let mileMin = Int(mileTime / 60)
+            let mileSec = Int(mileTime - Double(mileMin * 60))
             
             // if the sec is < 10, add proper spacing
             if mileSec < 10
@@ -1012,9 +1012,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1600m pace
-            var sixteenhunTime = Double(totalTime) * 1600 / Double(userDistInt)
-            var sixteenhunMin = Int(sixteenhunTime / 60)
-            var sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
+            let sixteenhunTime = Double(totalTime) * 1600 / Double(userDistInt)
+            let sixteenhunMin = Int(sixteenhunTime / 60)
+            let sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
             
             // if the sec is < 10, add proper spacing
             if sixteenhunSec < 10
@@ -1032,9 +1032,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1200m pace
-            var twelvehunTime = Double(totalTime) * 1200 / Double(userDistInt)
-            var twelvehunMin = Int(twelvehunTime / 60)
-            var twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
+            let twelvehunTime = Double(totalTime) * 1200 / Double(userDistInt)
+            let twelvehunMin = Int(twelvehunTime / 60)
+            let twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
             
             if twelvehunSec < 10
             {
@@ -1051,9 +1051,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1k pace
-            var oneKTime = Double(totalTime) * 1000 / Double(userDistInt)
-            var oneKMin = Int(oneKTime / 60)
-            var oneKSec = Int(oneKTime - Double(oneKMin * 60))
+            let oneKTime = Double(totalTime) * 1000 / Double(userDistInt)
+            let oneKMin = Int(oneKTime / 60)
+            let oneKSec = Int(oneKTime - Double(oneKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if oneKSec < 10
@@ -1071,9 +1071,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 800m pace
-            var eighthunTime = Double(totalTime) * 800 / Double(userDistInt)
-            var eighthunMin = Int(eighthunTime / 60)
-            var eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
+            let eighthunTime = Double(totalTime) * 800 / Double(userDistInt)
+            let eighthunMin = Int(eighthunTime / 60)
+            let eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
             
             // if the sec is <10, add proper spacing
             if eighthunSec < 10
@@ -1091,9 +1091,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 400m pace
-            var fourhunTime = Double(totalTime) * 400 / Double(userDistInt)
-            var fourhunSec = Int(fourhunTime)
-            var fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
+            let fourhunTime = Double(totalTime) * 400 / Double(userDistInt)
+            let fourhunSec = Int(fourhunTime)
+            let fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if fourhunMSec < 10
@@ -1111,9 +1111,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 200m pace
-            var twohunTime = Double(totalTime) * 200 / Double(userDistInt)
-            var twohunSec = Int(twohunTime)
-            var twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
+            let twohunTime = Double(totalTime) * 200 / Double(userDistInt)
+            let twohunSec = Int(twohunTime)
+            let twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if twohunMSec < 10
@@ -1131,9 +1131,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 100m pace
-            var onehunTime = Double(totalTime) * 100 / Double(userDistInt)
-            var onehunSec = Int(onehunTime)
-            var onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
+            let onehunTime = Double(totalTime) * 100 / Double(userDistInt)
+            let onehunSec = Int(onehunTime)
+            let onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if onehunMSec < 10
@@ -1153,10 +1153,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         else if userUnitOfMeasure == "Marathon"
         {
             // calcs for marathon pace
-            var marTime = Double(totalTime) / Double(userDistInt)
-            var marHour = Int(marTime / 3600)
-            var marMin = Int((marTime - Double(marHour * 3600)) / 60)
-            var marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
+            let marTime = Double(totalTime) / Double(userDistInt)
+            let marHour = Int(marTime / 3600)
+            let marMin = Int((marTime - Double(marHour * 3600)) / 60)
+            let marSec = Int(marTime - Double(marHour * 3600) - Double(marMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if marMin < 10 && marSec > 10
@@ -1192,10 +1192,10 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for halfmarathon pace
-            var halfmarTime = Double(totalTime) * 0.5 / Double(userDistInt)
-            var halfmarHour = Int(halfmarTime / 3600)
-            var halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
-            var halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
+            let halfmarTime = Double(totalTime) * 0.5 / Double(userDistInt)
+            let halfmarHour = Int(halfmarTime / 3600)
+            let halfmarMin = Int((halfmarTime - Double(halfmarHour * 3600)) / 60)
+            let halfmarSec = Int(halfmarTime - Double(halfmarHour * 3600) - Double(halfmarMin * 60))
             
             // if the min is less than 10, add 0 for proper spacing
             if halfmarMin < 10 && halfmarSec > 10
@@ -1231,9 +1231,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for tenK pace
-            var tenKTime = Double(totalTime) * 0.236995 / Double(userDistInt)
-            var tenKMin = Int(tenKTime / 60)
-            var tenKSec = Int(tenKTime - Double(tenKMin * 60))
+            let tenKTime = Double(totalTime) * 0.236995 / Double(userDistInt)
+            let tenKMin = Int(tenKTime / 60)
+            let tenKSec = Int(tenKTime - Double(tenKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if tenKSec < 10
@@ -1251,9 +1251,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for fiveK pace
-            var fiveKTime = Double(totalTime) * 0.118497 / Double(userDistInt)
-            var fiveKMin = Int(fiveKTime / 60)
-            var fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
+            let fiveKTime = Double(totalTime) * 0.118497 / Double(userDistInt)
+            let fiveKMin = Int(fiveKTime / 60)
+            let fiveKSec = Int(fiveKTime - Double(fiveKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if fiveKSec < 10
@@ -1271,9 +1271,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for threeK pace
-            var threeKTime = Double(totalTime) * 0.0710985 / Double(userDistInt)
-            var threeKMin = Int(threeKTime / 60)
-            var threeKSec = Int(threeKTime - Double(threeKMin * 60))
+            let threeKTime = Double(totalTime) * 0.0710985 / Double(userDistInt)
+            let threeKMin = Int(threeKTime / 60)
+            let threeKSec = Int(threeKTime - Double(threeKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if threeKSec < 10
@@ -1291,9 +1291,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for mile pace
-            var mileTime = Double(totalTime) * 0.0381406 / Double(userDistInt)
-            var mileMin = Int(mileTime / 60)
-            var mileSec = Int(mileTime - Double(mileMin * 60))
+            let mileTime = Double(totalTime) * 0.0381406 / Double(userDistInt)
+            let mileMin = Int(mileTime / 60)
+            let mileSec = Int(mileTime - Double(mileMin * 60))
             
             // if the sec is < 10, add proper spacing
             if mileSec < 10
@@ -1311,9 +1311,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1600m pace
-            var sixteenhunTime = Double(totalTime) * 0.03791918 / Double(userDistInt)
-            var sixteenhunMin = Int(sixteenhunTime / 60)
-            var sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
+            let sixteenhunTime = Double(totalTime) * 0.03791918 / Double(userDistInt)
+            let sixteenhunMin = Int(sixteenhunTime / 60)
+            let sixteenhunSec = Int(sixteenhunTime - Double(sixteenhunMin * 60))
             
             // if the sec is < 10, add proper spacing
             if sixteenhunSec < 10
@@ -1331,9 +1331,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1200m pace
-            var twelvehunTime = Double(totalTime) * 0.02843939 / Double(userDistInt)
-            var twelvehunMin = Int(twelvehunTime / 60)
-            var twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
+            let twelvehunTime = Double(totalTime) * 0.02843939 / Double(userDistInt)
+            let twelvehunMin = Int(twelvehunTime / 60)
+            let twelvehunSec = Int(twelvehunTime - Double(twelvehunMin * 60))
             
             if twelvehunSec < 10
             {
@@ -1350,9 +1350,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 1k pace
-            var oneKTime = Double(totalTime) * 0.0236995 / Double(userDistInt)
-            var oneKMin = Int(oneKTime / 60)
-            var oneKSec = Int(oneKTime - Double(oneKMin * 60))
+            let oneKTime = Double(totalTime) * 0.0236995 / Double(userDistInt)
+            let oneKMin = Int(oneKTime / 60)
+            let oneKSec = Int(oneKTime - Double(oneKMin * 60))
             
             // if the sec is < 10, add proper spacing
             if oneKSec < 10
@@ -1370,9 +1370,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 800m pace
-            var eighthunTime = Double(totalTime) * 0.0189596 / Double(userDistInt)
-            var eighthunMin = Int(eighthunTime / 60)
-            var eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
+            let eighthunTime = Double(totalTime) * 0.0189596 / Double(userDistInt)
+            let eighthunMin = Int(eighthunTime / 60)
+            let eighthunSec = Int(eighthunTime - Double(eighthunMin * 60))
             
             // if the sec is <10, add proper spacing
             if eighthunSec < 10
@@ -1390,9 +1390,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 400m pace
-            var fourhunTime = Double(totalTime) * 0.0094798 / Double(userDistInt)
-            var fourhunSec = Int(fourhunTime)
-            var fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
+            let fourhunTime = Double(totalTime) * 0.0094798 / Double(userDistInt)
+            let fourhunSec = Int(fourhunTime)
+            let fourhunMSec = Int((fourhunTime - Double(fourhunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if fourhunMSec < 10
@@ -1410,9 +1410,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 200m pace
-            var twohunTime = Double(totalTime) * 0.0047399 / Double(userDistInt)
-            var twohunSec = Int(twohunTime)
-            var twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
+            let twohunTime = Double(totalTime) * 0.0047399 / Double(userDistInt)
+            let twohunSec = Int(twohunTime)
+            let twohunMSec = Int((twohunTime - Double(twohunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if twohunMSec < 10
@@ -1430,9 +1430,9 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
             
             
             // calcs for 100m pace
-            var onehunTime = Double(totalTime) * 0.00236995 / Double(userDistInt)
-            var onehunSec = Int(onehunTime)
-            var onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
+            let onehunTime = Double(totalTime) * 0.00236995 / Double(userDistInt)
+            let onehunSec = Int(onehunTime)
+            let onehunMSec = Int((onehunTime - Double(onehunSec)) * 100)
             
             // if MSec <10, add proper spacing
             if onehunMSec < 10
