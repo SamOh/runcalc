@@ -13,6 +13,14 @@
 		78840EE51C0384D4002CC1C6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78840EE41C0384D4002CC1C6 /* Images.xcassets */; };
 		78840EE81C0384D4002CC1C6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 78840EE61C0384D4002CC1C6 /* LaunchScreen.xib */; };
 		78840EF41C0384D4002CC1C6 /* RunCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78840EF31C0384D4002CC1C6 /* RunCalcTests.swift */; };
+		789F2E8B1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */; };
+		789F2E8D1C41EDDE0036E7CD /* PacesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789F2E8C1C41EDDE0036E7CD /* PacesTableViewCell.swift */; };
+		78E52AC31C0FE8E500A0CE70 /* SavedPacesImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 78E52AC21C0FE8E500A0CE70 /* SavedPacesImage.png */; };
+		78E52AC71C0FE9A300A0CE70 /* calcImage.png in Resources */ = {isa = PBXBuildFile; fileRef = 78E52AC61C0FE9A300A0CE70 /* calcImage.png */; };
+		78EA38D51C13705B0060C22C /* PacesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78EA38D41C13705B0060C22C /* PacesViewController.swift */; };
+		78EA38D71C140B980060C22C /* Documentation.html in Resources */ = {isa = PBXBuildFile; fileRef = 78EA38D61C140B980060C22C /* Documentation.html */; };
+		78EA38D91C140E510060C22C /* Design.html in Resources */ = {isa = PBXBuildFile; fileRef = 78EA38D81C140E510060C22C /* Design.html */; };
+		78FB43F91C49AD5F000ECFFA /* parse-library-1.12.0 in Resources */ = {isa = PBXBuildFile; fileRef = 78FB43F81C49AD5F000ECFFA /* parse-library-1.12.0 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +44,14 @@
 		78840EED1C0384D4002CC1C6 /* RunCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78840EF21C0384D4002CC1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78840EF31C0384D4002CC1C6 /* RunCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCalcTests.swift; sourceTree = "<group>"; };
+		789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPacesTableViewController.swift; sourceTree = "<group>"; };
+		789F2E8C1C41EDDE0036E7CD /* PacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacesTableViewCell.swift; sourceTree = "<group>"; };
+		78E52AC21C0FE8E500A0CE70 /* SavedPacesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedPacesImage.png; sourceTree = "<group>"; };
+		78E52AC61C0FE9A300A0CE70 /* calcImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calcImage.png; sourceTree = "<group>"; };
+		78EA38D41C13705B0060C22C /* PacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacesViewController.swift; sourceTree = "<group>"; };
+		78EA38D61C140B980060C22C /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
+		78EA38D81C140E510060C22C /* Design.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Design.html; sourceTree = "<group>"; };
+		78FB43F81C49AD5F000ECFFA /* parse-library-1.12.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.12.0"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +75,9 @@
 		78840ECF1C0384D4002CC1C6 = {
 			isa = PBXGroup;
 			children = (
+				78FB43F81C49AD5F000ECFFA /* parse-library-1.12.0 */,
 				78840EDA1C0384D4002CC1C6 /* RunCalc */,
+				789F2E8E1C41EE080036E7CD /* Graphics */,
 				78840EF01C0384D4002CC1C6 /* RunCalcTests */,
 				78840ED91C0384D4002CC1C6 /* Products */,
 			);
@@ -79,10 +97,15 @@
 			children = (
 				78840EDD1C0384D4002CC1C6 /* AppDelegate.swift */,
 				78840EDF1C0384D4002CC1C6 /* ViewController.swift */,
+				78EA38D41C13705B0060C22C /* PacesViewController.swift */,
+				789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */,
+				789F2E8C1C41EDDE0036E7CD /* PacesTableViewCell.swift */,
 				78840EE11C0384D4002CC1C6 /* Main.storyboard */,
+				78EA38D61C140B980060C22C /* Documentation.html */,
 				78840EE41C0384D4002CC1C6 /* Images.xcassets */,
 				78840EE61C0384D4002CC1C6 /* LaunchScreen.xib */,
 				78840EDB1C0384D4002CC1C6 /* Supporting Files */,
+				78EA38D81C140E510060C22C /* Design.html */,
 			);
 			path = RunCalc;
 			sourceTree = "<group>";
@@ -110,6 +133,16 @@
 				78840EF21C0384D4002CC1C6 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		789F2E8E1C41EE080036E7CD /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				78E52AC61C0FE9A300A0CE70 /* calcImage.png */,
+				78E52AC21C0FE8E500A0CE70 /* SavedPacesImage.png */,
+			);
+			name = Graphics;
+			path = RunCalc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,7 +227,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				78840EE31C0384D4002CC1C6 /* Main.storyboard in Resources */,
+				78EA38D71C140B980060C22C /* Documentation.html in Resources */,
+				78E52AC71C0FE9A300A0CE70 /* calcImage.png in Resources */,
+				78EA38D91C140E510060C22C /* Design.html in Resources */,
+				78E52AC31C0FE8E500A0CE70 /* SavedPacesImage.png in Resources */,
 				78840EE81C0384D4002CC1C6 /* LaunchScreen.xib in Resources */,
+				78FB43F91C49AD5F000ECFFA /* parse-library-1.12.0 in Resources */,
 				78840EE51C0384D4002CC1C6 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -214,7 +252,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				78840EE01C0384D4002CC1C6 /* ViewController.swift in Sources */,
+				789F2E8D1C41EDDE0036E7CD /* PacesTableViewCell.swift in Sources */,
 				78840EDE1C0384D4002CC1C6 /* AppDelegate.swift in Sources */,
+				789F2E8B1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift in Sources */,
+				78EA38D51C13705B0060C22C /* PacesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +383,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RunCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -352,6 +394,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = RunCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
