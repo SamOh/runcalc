@@ -44,7 +44,7 @@
 		78840EED1C0384D4002CC1C6 /* RunCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78840EF21C0384D4002CC1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78840EF31C0384D4002CC1C6 /* RunCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCalcTests.swift; sourceTree = "<group>"; };
-		789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPacesTableViewController.swift; sourceTree = "<group>"; };
+		789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SavedPacesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		789F2E8C1C41EDDE0036E7CD /* PacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PacesTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78E52AC21C0FE8E500A0CE70 /* SavedPacesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedPacesImage.png; sourceTree = "<group>"; };
 		78E52AC61C0FE9A300A0CE70 /* calcImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calcImage.png; sourceTree = "<group>"; };
