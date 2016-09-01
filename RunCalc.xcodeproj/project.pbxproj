@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		78840ED81C0384D4002CC1C6 /* RunCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RunCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78840EDC1C0384D4002CC1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78840EDD1C0384D4002CC1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78840EDD1C0384D4002CC1C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78840EDF1C0384D4002CC1C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		78840EE21C0384D4002CC1C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		78840EE41C0384D4002CC1C6 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -44,13 +44,13 @@
 		78840EED1C0384D4002CC1C6 /* RunCalcTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RunCalcTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		78840EF21C0384D4002CC1C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78840EF31C0384D4002CC1C6 /* RunCalcTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RunCalcTests.swift; sourceTree = "<group>"; };
-		789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedPacesTableViewController.swift; sourceTree = "<group>"; };
-		789F2E8C1C41EDDE0036E7CD /* PacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacesTableViewCell.swift; sourceTree = "<group>"; };
+		789F2E8A1C3EE5AB0036E7CD /* SavedPacesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SavedPacesTableViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		789F2E8C1C41EDDE0036E7CD /* PacesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PacesTableViewCell.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		78E52AC21C0FE8E500A0CE70 /* SavedPacesImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SavedPacesImage.png; sourceTree = "<group>"; };
 		78E52AC61C0FE9A300A0CE70 /* calcImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calcImage.png; sourceTree = "<group>"; };
-		78EA38D41C13705B0060C22C /* PacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PacesViewController.swift; sourceTree = "<group>"; };
-		78EA38D61C140B980060C22C /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Documentation.html; sourceTree = "<group>"; };
-		78EA38D81C140E510060C22C /* Design.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Design.html; sourceTree = "<group>"; };
+		78EA38D41C13705B0060C22C /* PacesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = PacesViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		78EA38D61C140B980060C22C /* Documentation.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; lineEnding = 0; path = Documentation.html; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
+		78EA38D81C140E510060C22C /* Design.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; lineEnding = 0; path = Design.html; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.html; };
 		78FB43F81C49AD5F000ECFFA /* parse-library-1.12.0 */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "parse-library-1.12.0"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
